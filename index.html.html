@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chandana P — AI/ML Engineer</title>
+<meta name="description" content="Chandana P, AI/ML engineer in Bangalore. Computer vision and generative AI systems in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F1EEF8;
+  --panel: #E6E1F3;
+  --ink: #221A38;
+  --muted: #5E557A;
+  --line: #CFC6E6;
+  --accent: #6A4BE0;
+  --warm: #D9572B;
+  --accent-soft: rgba(106, 75, 224, .22);
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17112A; --panel: #211A3A; --ink: #EEE9FB; --muted: #A69DC6; --line: #362C57;
+    --accent: #B6A3FF; --warm: #FFAA80; --accent-soft: rgba(140, 115, 255, .28);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17112A; --panel: #211A3A; --ink: #EEE9FB; --muted: #A69DC6; --line: #362C57;
+  --accent: #B6A3FF; --warm: #FFAA80; --accent-soft: rgba(140, 115, 255, .28);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 76px); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+h1, h2, h3, .mark { font-family: Sora, "Segoe UI", system-ui, sans-serif; }
+
+/* Nav */
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 1rem; }
+.mark { font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; text-decoration: none; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; font-size: .95rem; }
+nav ul a { text-decoration: none; color: var(--muted); }
+nav ul a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding: clamp(3.25rem, 8vw, 6rem) 0 clamp(3rem, 6vw, 4.5rem); position: relative; overflow: hidden; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background-image: radial-gradient(var(--line) 1.2px, transparent 1.2px); background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 75% 30%, #000 10%, transparent 70%);
+          mask-image: radial-gradient(ellipse 70% 80% at 75% 30%, #000 10%, transparent 70%); }
+.hero::after { content: ""; position: absolute; z-index: -1; width: 620px; height: 620px; right: -160px; top: -220px; border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 65%); filter: blur(10px); }
+h1 { background: linear-gradient(100deg, var(--ink) 35%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: .08em; }
+.role-line { display: inline-flex; align-items: center; gap: .55rem; color: var(--muted); margin: 0 0 1.5rem; font-size: .98rem; }
+.role-line::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--warm); }
+h1 { font-weight: 700; font-size: clamp(2.2rem, 6.5vw, 4.5rem); line-height: 1; letter-spacing: -.03em; margin: 0; white-space: nowrap; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 2rem 4rem; margin-top: clamp(2.25rem, 5vw, 3.5rem); align-items: start; }
+.statement { font-family: Sora, sans-serif; font-weight: 600; font-size: clamp(1.15rem, 1.9vw, 1.45rem); line-height: 1.4; letter-spacing: -.015em; margin: 0; max-width: 34ch; }
+.statement i { font-style: normal; color: var(--accent); }
+.hero-side { background: var(--panel); border-left: 3px solid var(--warm); padding: 1.5rem; border-radius: 0 8px 8px 0; }
+.hero-side p { margin: 0 0 1.25rem; color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: .55rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; padding: .7rem 1.2rem; border-radius: 999px; border: 1.5px solid var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; transition: transform .15s; }
+.btn.solid { background: var(--ink); color: var(--bg); }
+.btn:hover { transform: translateY(-1px); }
+.btn svg { width: 1em; height: 1em; fill: currentColor; }
+
+.reveal { opacity: 0; transform: translateY(14px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+.reveal.d2 { animation-delay: .12s; } .reveal.d3 { animation-delay: .3s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* Sections */
+section { padding: clamp(2.75rem, 6vw, 4.5rem) 0; border-top: 1px solid var(--line); }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 1rem 4rem; margin-bottom: 1.75rem; align-items: end; }
+h2 { font-weight: 700; font-size: clamp(1.6rem, 3.2vw, 2.25rem); line-height: 1; letter-spacing: -.025em; margin: 0; }
+.head p { margin: 0; color: var(--muted); max-width: 58ch; }
+h3 { font-weight: 700; font-size: 1.15rem; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 .6rem; }
+
+/* What I bring */
+.bring { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.bring > div { background: var(--panel); border-radius: 8px; padding: 1.5rem; border-top: 3px solid var(--accent); }
+.bring p { margin: 0; color: var(--muted); }
+
+/* Pipeline */
+.pipeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .75rem; }
+.pipeline li { position: relative; background: var(--panel); border-radius: 8px; padding: 1.1rem 1rem 1.25rem; border-top: 3px solid var(--accent); }
+.pipeline li:last-child { border-top-color: var(--warm); }
+.pipeline li:not(:last-child)::after { content: ""; position: absolute; right: -.62rem; top: 1.7rem; width: .5rem; height: 2px; background: var(--accent); }
+.pipeline .n { display: block; font-family: Sora, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+.pipeline li:last-child .n { color: var(--warm); }
+.pipeline strong { display: block; margin: .35rem 0 .3rem; line-height: 1.25; }
+.pipeline span:not(.n) { display: block; font-size: .88rem; color: var(--muted); line-height: 1.45; }
+
+/* Experience */
+.job { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 1rem 4rem; padding: 2.5rem 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.when { color: var(--muted); font-size: .95rem; }
+.when b { display: block; color: var(--accent); font-family: Sora, sans-serif; font-weight: 700; font-size: 1.1rem; }
+.job ul { margin: 0; padding-left: 1.1rem; max-width: 68ch; }
+.job li { margin-bottom: .55rem; }
+.job li::marker { color: var(--accent); }
+.facts { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin: .5rem 0 1.4rem; padding: 1rem 1.25rem; background: var(--panel); border-left: 3px solid var(--warm); border-radius: 0 8px 8px 0; }
+.facts div { color: var(--muted); font-size: .9rem; }
+.facts strong { display: block; font-family: Sora, sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--ink); letter-spacing: -.02em; line-height: 1.15; }
+
+/* Projects */
+.project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 1.25rem 4rem; padding: 2.5rem 0; border-top: 1px solid var(--line); }
+.project:first-of-type { border-top: 0; padding-top: 0; }
+.project .big { background: var(--panel); border-radius: 8px; padding: 1.5rem; font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(2rem, 3.5vw, 2.6rem); line-height: 1; letter-spacing: -.03em; color: var(--accent); align-self: start; }
+.project .big small { display: block; font-family: "Instrument Sans", sans-serif; font-weight: 400; letter-spacing: 0; font-size: .92rem; color: var(--muted); margin-top: .6rem; line-height: 1.4; }
+.project p { margin: 0 0 .8rem; max-width: 62ch; }
+.stack { margin: 1rem 0 0; color: var(--muted); font-size: .92rem; }
+.stack b { color: var(--ink); font-weight: 600; }
+
+/* Skills + beyond */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem 3rem; margin: 0; }
+.cols dt { font-family: Sora, sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: .45rem; }
+.cols dt::before { content: ""; display: inline-block; width: 10px; height: 10px; border: 2px solid var(--accent); border-radius: 2px; margin-right: .55rem; }
+.cols dd { margin: 0; color: var(--muted); }
+
+.edu { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 1rem 4rem; align-items: center; }
+.edu .gpa { font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(2.2rem, 4.5vw, 3rem); line-height: 1; letter-spacing: -.03em; color: var(--accent); }
+.edu .gpa small { display: block; font-family: "Instrument Sans", sans-serif; font-weight: 500; letter-spacing: 0; font-size: .9rem; color: var(--muted); }
+.edu p { margin: .3rem 0 0; color: var(--muted); }
+
+/* Contact */
+.contact { padding-bottom: clamp(4rem, 10vw, 7rem); }
+.contact h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); max-width: 16ch; margin-bottom: 1.25rem; }
+.contact .lead { color: var(--muted); max-width: 52ch; margin: 0 0 2rem; }
+.reach { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+.reach a { display: block; height: 100%; padding: 1.1rem 1.25rem; background: var(--panel); border-radius: 8px; text-decoration: none; border: 1.5px solid transparent; }
+.reach a:hover { border-color: var(--accent); }
+.reach small { display: block; color: var(--muted); font-size: .85rem; margin-bottom: .2rem; }
+.reach b { font-weight: 600; font-size: 1rem; overflow-wrap: anywhere; }
+footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 960px) {
+  .pipeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pipeline li::after { display: none; }
+  .reach { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  nav ul { gap: 1rem; font-size: .9rem; }
+  nav ul .hide-sm { display: none; }
+  .hero-grid, .head, .job, .project, .edu { grid-template-columns: 1fr; }
+  .bring { grid-template-columns: 1fr; }
+  .pipeline { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 460px) { .reach { grid-template-columns: 1fr; } }
+
+/* Scroll reveal */
+.js .sr { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.js .sr.in { opacity: 1; transform: none; }
+.js h2.sr { transform: translateX(-24px); }
+.js h2.sr.in { transform: none; }
+.js .pipeline li.sr { transform: translateY(18px) scale(.97); }
+.js .pipeline li.sr.in { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .sr, .js h2.sr, .js .pipeline li.sr { opacity: 1; transform: none; transition: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { animation: none; opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">Chandana P</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li class="hide-sm"><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="role-line reveal">AI/ML Engineer in Bangalore, currently at Reformmed.ai</p>
+    <h1 class="reveal d2">Chandana P</h1>
+    <div class="hero-grid reveal d3">
+      <p class="statement">AI and Data Science graduate who develops, tests and deploys Python-based AI: <i>machine learning, generative AI, data pipelines and analytics</i> that solve real-world problems.</p>
+      <div class="hero-side">
+        <p>B.E. in AI and Data Science from CMR Institute of Technology, now a Junior AI/ML Engineer at Reformmed.ai. Looking for AI/ML Engineer and Data Analyst roles with global teams.</p>
+        <div class="links">
+          <a class="btn solid" href="mailto:chandanaap9393@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/chandana-p-3166a2356/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/chandanap2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="bring">
+    <div class="wrap">
+      <div class="head"><h2>What I bring</h2><p>Fresh out of an AI and Data Science degree, already running models in real hospitals.</p></div>
+      <div class="bring">
+        <div><h3>I ship to production</h3><p>My models run live on about 2,000 hospital cameras. Testing, deployment and production debugging are part of my everyday work, not an afterthought.</p></div>
+        <div><h3>I own the whole pipeline</h3><p>Data collection, annotation, training, APIs, databases, dashboards and alerts. Give me a problem and I’ll take it all the way to the user.</p></div>
+        <div><h3>Vision and language, together</h3><p>I pair computer vision with LLMs and RAG, so the system doesn’t only detect an event, it explains what happened to the people who need to act.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="system">
+    <div class="wrap">
+      <div class="head"><h2>The system I built</h2><p>How a single camera frame becomes an alert hospital staff can act on, in the surveillance platform I designed and deployed at Reformmed.ai.</p></div>
+      <ol class="pipeline">
+        <li><span class="n">1</span><strong>Camera feeds</strong><span>About 2,000 live RTSP streams across 105 units</span></li>
+        <li><span class="n">2</span><strong>Detection and tracking</strong><span>YOLO and OpenCV, with emergency detection and region-based monitoring</span></li>
+        <li><span class="n">3</span><strong>Re-ID matching</strong><span>Embeddings in a vector database link one person across cameras</span></li>
+        <li><span class="n">4</span><strong>Patient journey</strong><span>A Flask app rebuilds each patient’s path through the hospital</span></li>
+        <li><span class="n">5</span><strong>LLM and RAG reports</strong><span>Events written up automatically, stored in PostgreSQL</span></li>
+        <li><span class="n">6</span><strong>Real-time alerts</strong><span>Rule-based alerts and live dashboards for staff and clients</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head"><h2>Experience</h2></div>
+      <article class="job">
+        <div class="when"><b>Reformmed.ai</b>Aug 2026 to present</div>
+        <div>
+          <h3>Junior AI/ML Engineer</h3>
+          <div class="facts">
+            <div><strong>~2,000</strong>cameras in production</div>
+            <div><strong>105</strong>hospital units</div>
+            <div><strong>Real time</strong>alerts to staff</div>
+          </div>
+          <ul>
+            <li>Designed, built and deployed a real-time computer vision surveillance platform for hospitals, owning the whole pipeline from data collection and annotation to model training, integration and client-facing alerts for patient safety.</li>
+            <li>Built real-time CCTV analytics with OpenCV, YOLO and RTSP streams, covering emergency detection, object tracking and region-based monitoring.</li>
+            <li>Built a Flask app that reconstructs each patient’s journey across multi-camera feeds, matching people between cameras with Re-ID embeddings in a vector database.</li>
+            <li>Integrated an LLM with RAG for automated event reports, designed the PostgreSQL schemas, and built live analytics dashboards with a rule-based alerting layer.</li>
+            <li>Handle testing, deployment and production troubleshooting, and fold client feedback back into the product.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when"><b>LearnersByte</b>Jan to Mar 2026</div>
+        <div>
+          <h3>GenAI Intern, Bharat Unnati AI Fellowship</h3>
+          <ul>
+            <li>Built mini-projects with large language models and n8n to automate AI workflows.</li>
+            <li>Worked hands-on with prompt engineering and agentic AI to build practical AI tools.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="head"><h2>Projects</h2></div>
+      <article class="project">
+        <div class="big">82+<small>features read from every interview answer</small></div>
+        <div>
+          <h3>AI mock interview evaluator</h3>
+          <p>A multimodal system that reads a mock interview the way a panel would: what you say, how you say it, and what your face and voice give away. It scores confidence and emotion from speech, text, facial and vocal features.</p>
+          <p>An XGBoost model, validated with 5-fold cross-validation, turns those signals into a prediction of how the candidate performed.</p>
+          <p class="stack"><b>Built with</b> XGBoost, AssemblyAI, spaCy, MediaPipe, OpenSMILE</p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="big">CNN<small>trained to read disease from a leaf photo</small></div>
+        <div>
+          <h3>Plant disease detection</h3>
+          <p>A convolutional neural network that classifies potato leaf diseases from images. Albumentations-based augmentation helps it handle real-world variation in lighting, angle and framing.</p>
+          <p>Evaluated with accuracy, confusion matrices and classification reports.</p>
+          <p class="stack"><b>Built with</b> TensorFlow, Albumentations, image preprocessing</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="head"><h2>Skills</h2></div>
+      <dl class="cols">
+        <div><dt>Computer vision</dt><dd>YOLO, OpenCV, MediaPipe, RTSP streams, object tracking, Re-ID embeddings, vector databases, CNNs, annotation and augmentation</dd></div>
+        <div><dt>AI and machine learning</dt><dd>RAG, LLM integration, agentic AI, NLP, text-to-SQL, Scikit-learn, XGBoost, KNN, TensorFlow, feature engineering, model evaluation</dd></div>
+        <div><dt>Building and shipping</dt><dd>FastAPI, Flask, Docker, CI/CD, PostgreSQL, testing, production debugging, workflow automation with n8n</dd></div>
+        <div><dt>Data and analytics</dt><dd>Python, Pandas, NumPy, SQL, Matplotlib, Tableau, Power BI, Excel, EDA, automated reporting</dd></div>
+        <div><dt>Statistics</dt><dd>Descriptive statistics, correlation analysis, hypothesis testing, predictive modelling</dd></div>
+        <div><dt>Tools</dt><dd>Git, GitHub, VS Code, PyCharm</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="head"><h2>Education</h2></div>
+      <div class="edu">
+        <div class="gpa">8.4<small>CGPA</small></div>
+        <div>
+          <h3>B.E. in Artificial Intelligence and Data Science</h3>
+          <p>CMR Institute of Technology, Bengaluru, 2022 to 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <div class="wrap">
+      <div class="head"><h2>Beyond the code</h2></div>
+      <dl class="cols">
+        <div><dt>Leadership</dt><dd>Event Head for AURA 2024, the college dance showcase.</dd></div>
+        <div><dt>Community</dt><dd>NSS volunteer and member of the college technical club.</dd></div>
+        <div><dt>Certifications</dt><dd>Google Data Analytics Professional Certificate (Coursera), AI Engineer Course 2025 (Udemy), Complete Python Bootcamp (Udemy)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let’s build something that works.</h2>
+      <p class="lead">I’m looking for AI/ML Engineer and Data Analyst roles with global teams, where I can turn data and models into products people rely on. Email or call, and I’ll get back to you quickly.</p>
+      <ul class="reach">
+        <li><a href="mailto:chandanaap9393@gmail.com"><small>Email</small><b>chandanaap9393@gmail.com</b></a></li>
+        <li><a href="tel:+919353740652"><small>Phone</small><b>+91 93537 40652</b></a></li>
+        <li><a href="https://www.linkedin.com/in/chandana-p-3166a2356/" target="_blank" rel="noopener"><small>LinkedIn</small><b>chandana-p-3166a2356</b></a></li>
+        <li><a href="https://github.com/chandanap2" target="_blank" rel="noopener"><small>GitHub</small><b>chandanap2</b></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Chandana P, Bangalore</div></footer>
+<script>
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var groups = [
+    'main h2', '.head p',
+    '.bring > div', '.pipeline li',
+    '.job .when', '.job > div',
+    '.project .big', '.project > div:last-child',
+    '.cols > div', '.edu > div', '.contact .lead', '.reach li'
+  ];
+  var els = [];
+  groups.forEach(function (sel) {
+    var list = document.querySelectorAll(sel);
+    list.forEach(function (el, i) {
+      el.classList.add('sr');
+      var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      el.style.setProperty('--d', (Math.min(sibs, 6) * 0.08) + 's');
+      els.push(el);
+    });
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
